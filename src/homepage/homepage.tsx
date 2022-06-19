@@ -39,7 +39,6 @@ const styles = StyleSheet.create({
         borderRadius:30,
         height: 50,
         margin: 10,
-        onHover: "pointer",
     },
     registerButton: {
         backgroundColor: "#000000",
