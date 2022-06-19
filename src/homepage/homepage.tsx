@@ -7,10 +7,10 @@ const HomePage = () => {
             <View style={styles.homepageContainerRow}>
                 <Text style={styles.titleText}> FIND YOUR </Text>
                 <Text style={styles.titleTextBig}>CIRCLE</Text>
-                <Pressable style={styles.loginButton}>
+                <Pressable style={styles.loginButton} onPress={() => {Alert.alert("Log in")}}>
                     <Text style={styles.buttonText}>LOGIN</Text>
                 </Pressable>
-                <Pressable style={styles.registerButton}>
+                <Pressable style={styles.registerButton} onPress={() => {Alert.alert("Register")}}>
                     <Text style={styles.buttonText}>REGISTER</Text>
                 </Pressable>
             </View>
