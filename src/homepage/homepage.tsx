@@ -4,9 +4,15 @@ import { Alert, Button, Pressable, ScrollViewBase, StyleSheet, Text, View } from
 const HomePage = () => {
     return (
         <View style={styles.homepageContainerColumn} >
-            <View style={{paddingBottom: 40}}>
+            <View style={styles.homepageContainerRow}>
                 <Text style={styles.titleText}> FIND YOUR </Text>
                 <Text style={styles.titleTextBig}>CIRCLE</Text>
+                <Pressable style={styles.loginButton}>
+                    <Text style={styles.buttonText}>LOGIN</Text>
+                </Pressable>
+                <Pressable style={styles.registerButton}>
+                    <Text style={styles.buttonText}>REGISTER</Text>
+                </Pressable>
             </View>
         </View>
     ) ;
@@ -20,9 +26,27 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: '#E5E5E5',
+        
+    },
+    homepageContainerRow: {
+        paddingBottom: 40,
+
     },
     loginButton: {
-        color: "red",
+        backgroundColor: "#4ABED8",
+        flexDirection: "row",
+        justifyContent: "center",
+        borderRadius:30,
+        height: 50,
+        margin: 10,
+    },
+    registerButton: {
+        backgroundColor: "#000000",
+        flexDirection: "row",
+        justifyContent: "center",
+        borderRadius:30,
+        height: 50,
+        margin: 10,
     },
     titleText: {
         fontWeight: "400",
@@ -36,8 +60,16 @@ const styles = StyleSheet.create({
         fontSize: 50,
         lineHeight: 58.7,
         letterSpacing: 10,
-
+    },
+    buttonText: {
+        fontWeight: "700",
+        fontSize: 20,
+        lineHeight: 23,
+        letterSpacing: 2.4,
+        paddingTop: "3.5%",
+        color: "#FFFFFF",
     }
+
   });
 
 
