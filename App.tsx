@@ -28,6 +28,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import LoginPage from './src/login/loginpage';
 
 const Section: React.FC<{
   title: string;
@@ -65,7 +66,7 @@ const App = () => {
   };
 
   return (
-    <HomePage />
+    <LoginPage />
   );
 };
 
