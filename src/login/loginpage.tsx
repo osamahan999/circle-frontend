@@ -28,7 +28,7 @@ const LoginPage = () => {
                         (text) => onChangeUsernameText(text)
                     }
                     autoCapitalize="none"
-                    autoCorrect = "none"
+                    autoCorrect={false}
                     value={usernameText}
                 >        
                 </TextInput>
@@ -40,7 +40,7 @@ const LoginPage = () => {
                     onChangeText={(text) => onChangePasswordText(text)}
                     value={passwordText}
                     autoCapitalize="none"
-                    autoCorrect = "none"
+                    autoCorrect={false}
                 >   
                 </TextInput>
                 <Pressable style={styles.loginButton} onPress={() => {Alert.alert(usernameText + "" + passwordText)}}>
@@ -82,6 +82,7 @@ const styles = StyleSheet.create({
         borderColor: "#000000",
         borderRadius: 30,
         padding: 10,
+        marginTop: 5,
     },
     buttonText: {
         fontWeight: "700",
