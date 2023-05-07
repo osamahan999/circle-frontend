@@ -19,13 +19,21 @@ const HomePage = () => {
 } ;
 
 const styles = StyleSheet.create({
+    buttonText: {
+        color: "#FFFFFF",
+        fontSize: 20,
+        fontWeight: "700",
+        letterSpacing: 2.4,
+        lineHeight: 23,
+        paddingTop: "3.5%",
+    },
     homepageContainerColumn: {
-        flex: 1,
         alignContent: "center",
-        flexDirection: 'column',
         alignItems: "center",
-        justifyContent: "center",
         backgroundColor: '#E5E5E5',
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: "center",
         
     },
     homepageContainerRow: {
@@ -34,40 +42,32 @@ const styles = StyleSheet.create({
     },
     loginButton: {
         backgroundColor: "#4ABED8",
-        flexDirection: "row",
-        justifyContent: "center",
         borderRadius:30,
+        flexDirection: "row",
         height: 50,
+        justifyContent: "center",
         margin: 10,
     },
     registerButton: {
         backgroundColor: "#000000",
-        flexDirection: "row",
-        justifyContent: "center",
         borderRadius:30,
+        flexDirection: "row",
         height: 50,
+        justifyContent: "center",
         margin: 10,
     },
     titleText: {
-        fontWeight: "400",
         fontSize: 20,
+        fontWeight: "400",
+        letterSpacing: 2,
         lineHeight: 23,
         textAlign: "center",
-        letterSpacing: 2,
     },
     titleTextBig: {
-        fontWeight: "700",
         fontSize: 50,
-        lineHeight: 58.7,
-        letterSpacing: 10,
-    },
-    buttonText: {
         fontWeight: "700",
-        fontSize: 20,
-        lineHeight: 23,
-        letterSpacing: 2.4,
-        paddingTop: "3.5%",
-        color: "#FFFFFF",
+        letterSpacing: 10,
+        lineHeight: 58.7,
     }
 
   });
