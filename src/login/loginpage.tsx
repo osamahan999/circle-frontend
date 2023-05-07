@@ -1,22 +1,23 @@
+/* eslint-disable react-native/no-color-literals */
 import React from 'react';
-import { StyleSheet, View, Text, TextInput, Alert, Pressable } from 'react-native';
+import { StyleSheet, View, Text, TextInput, Alert , TouchableOpacity} from 'react-native';
 
 
 const LoginPage = () => {
-    const [usernameText, onChangeUsernameText] = React.useState<string>();
-    const [passwordText, onChangePasswordText] = React.useState<string>();
+    const [usernameText, onChangeUsernameText] = React.useState<string>("");
+    const [passwordText, onChangePasswordText] = React.useState<string>("");
 
     return (
         <View style={
-            styles.loginpage
+            styles.loginPage
         }>
             <View style={
                 styles.loginColumn
             }>
                 <Text style={
-                    styles.loginTitleView
+                    styles.appName
                 }>
-                    LOGIN
+                    CIRCLE
                 </Text>
 
                 <TextInput 
@@ -43,9 +44,10 @@ const LoginPage = () => {
                     autoCorrect={false}
                 >   
                 </TextInput>
-                <Pressable style={styles.loginButton} onPress={() => {Alert.alert(usernameText + "" + passwordText)}}>
+                <TouchableOpacity style={styles.loginButton} onPress={() => {Alert.alert(usernameText + "" + passwordText)}}>
                     <Text style={styles.buttonText}>LOGIN</Text>
-                </Pressable>
+                </TouchableOpacity>
+                
             </View>
         </View>
     );
@@ -53,54 +55,59 @@ const LoginPage = () => {
 
 
 const styles = StyleSheet.create({
-    loginpage: {
-        width: "100%",
-        height: "100%",
-        backgroundColor: "#E5E5E5",
-        flexDirection: 'row',
-        justifyContent: "center"
-    },
-    loginColumn: {
-        width: "70%",
-        height: "100%",
-        justifyContent: "center",
-        alignItems: "center",
-        
-    },
-    loginTitleView: {
-        fontWeight: "700",
-        fontSize: 35,
-        lineHeight: 35,
-        letterSpacing: 2
-    },
-    inputBox: {
-        width: "100%",
-        height: "5%",
-        backgroundColor: "#FFFFFF",
-        borderWidth: 1,
-        borderStyle: "solid",
-        borderColor: "#000000",
-        borderRadius: 30,
-        padding: 10,
-        marginTop: 5,
+    appName: {
+        fontSize: 45,
+        fontWeight: "800",
+        letterSpacing: 10,
+        lineHeight: 100,
+        paddingBottom: "60%",
+
     },
     buttonText: {
-        fontWeight: "700",
-        fontSize: 20,
-        lineHeight: 23,
-        letterSpacing: 2.4,
-        paddingTop: "6%",
         color: "#FFFFFF",
+        fontSize: 20,
+        fontWeight: "700",
+        letterSpacing: 2.4   ,
+        lineHeight: 23,
+        paddingTop: "6%",
+    },
+    inputBox: {
+        backgroundColor: "#FFFFFF",
+        borderColor: "#000000",
+        borderRadius: 30,
+        borderStyle: "solid",
+        borderWidth: 1,
+        height: "5%",
+        marginTop: 5,
+        padding: 10,
+        width: "100%",
     },
     loginButton: {
         backgroundColor: "#000000",
-        flexDirection: "row",
-        justifyContent: "center",
         borderRadius:30,
+        flexDirection: "row",
         height: 50,
+        justifyContent: "center",
         margin: 10,
         width: "80%",
     },
+    loginColumn: {
+        alignItems: "center",
+        height: "100%",
+        justifyContent: "center",
+        width: "70%",
+        
+    },
+      loginPage: {
+        backgroundColor: "#E5E5E5",
+        flexDirection: 'row',
+        height: "100%",
+        justifyContent: "center",
+        width: "100%"
+    },
+    
+  
+  
 })
 
 
