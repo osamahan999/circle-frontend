@@ -7,6 +7,13 @@ const LoginPage = () => {
     const [usernameText, onChangeUsernameText] = React.useState<string>("");
     const [passwordText, onChangePasswordText] = React.useState<string>("");
 
+    const loginFlow = (username: String, password: String) => {
+        // TODO(osamahanhan): implement login flow
+        if (true) {
+            Alert.alert(usernameText + " " + passwordText)
+        }
+    }
+
     return (
         <View style={
             styles.loginPage
@@ -44,7 +51,7 @@ const LoginPage = () => {
                     autoCorrect={false}
                 >   
                 </TextInput>
-                <TouchableOpacity style={styles.loginButton} onPress={() => {Alert.alert(usernameText + "" + passwordText)}}>
+                <TouchableOpacity style={styles.loginButton} onPress={() => {loginFlow(usernameText, passwordText)}}>
                     <Text style={styles.buttonText}>LOGIN</Text>
                 </TouchableOpacity>
                 
